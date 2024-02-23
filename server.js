@@ -4,6 +4,7 @@ const port = 300
 
 const server = http.createServer(function (req, res) {
   res.writeHead(200, { "Content-Type": "text/html" })
+
   fs.readFile("index.html", function (err, data) {
     if (err) {
       res.writeHead("Error:file Not found")
@@ -22,3 +23,6 @@ server.listen(port, function (err) {
   }
 })
 // console.log("Hello from the server")
+fs.writeFile("hello.txt", "Hello World", (err) => {
+  return
+})
